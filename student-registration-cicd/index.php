@@ -15,7 +15,7 @@ session_start();
 
 <header class="site-header">
     <div class="container nav">
-        <a class="brand" href="index.php">Student Portal</a>
+        <a class="brand" href="index.php">Simple Student Portal</a>
 
         <nav>
             <?php if (isset($_SESSION['student_id'])): ?>
