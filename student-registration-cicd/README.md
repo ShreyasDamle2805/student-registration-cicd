@@ -1,25 +1,101 @@
-# Student Portal Static UI
+# 🚀 Student Registration Portal | AWS CI/CD Pipeline
 
-A simple frontend-only student registration and login portal.
+An end-to-end CI/CD pipeline for deploying a PHP-based Student Registration Portal on AWS using Jenkins, GitHub Webhooks, Apache, MariaDB, Amazon EFS, and an Application Load Balancer.
 
-## Run
+---
 
-Extract the folder and double-click `index.html`.
+## 🏗️ Architecture
 
-No XAMPP, PHP, Node.js, or database is required.
+```text
+VS Code
+   │
+Git Push
+   │
+GitHub
+   │
+Webhook
+   │
+Jenkins
+   │
+Build & Deploy
+   │
+Amazon EFS
+   │
+Apache Servers
+   │
+Application Load Balancer
+   │
+PHP Application
+   │
+MariaDB
+```
 
-## Demo flow
+---
 
-1. Open `index.html`.
-2. Register a student.
-3. Log in with the same email and password.
-4. View the dashboard.
-5. Log out.
+## ✨ Features
 
-## Important
+- 🔄 Automated CI/CD using Jenkins
+- 📦 GitHub Webhook Integration
+- 🌐 PHP Student Registration & Login
+- 🗄️ MariaDB Database
+- 📁 Shared Storage using Amazon EFS
+- ⚖️ Application Load Balancer
+- 🔐 Secure Password Hashing
+- 🚀 Automatic Deployment on every Git Push
 
-This version uses browser `localStorage` and `sessionStorage` only for UI demonstration.
+---
 
-It is not real authentication and should not be used as the production backend.
+## 🛠️ Tech Stack
 
-Later, replace the browser storage logic with PHP and MySQL on AWS.
+- AWS EC2
+- Jenkins
+- Git & GitHub
+- Apache
+- PHP
+- MariaDB
+- Amazon EFS
+- Application Load Balancer
+- Linux
+
+---
+
+## 📂 Project Structure
+
+```text
+student-registration-cicd/
+│── index.php
+│── register.php
+│── login.php
+│── dashboard.php
+│── logout.php
+│── db.php
+│── health.php
+│── style.css
+```
+
+---
+
+## 🚀 CI/CD Workflow
+
+1. Code changes pushed to GitHub.
+2. GitHub Webhook triggers Jenkins.
+3. Jenkins pulls the latest code.
+4. PHP validation and deployment.
+5. Application is deployed to Amazon EFS.
+6. Apache serves the updated application.
+7. ALB routes traffic to healthy instances.
+
+---
+
+
+## 📚 Learning Outcomes
+
+- Jenkins CI/CD Pipeline
+- AWS EC2 Deployment
+- GitHub Webhooks
+- Amazon EFS
+- Apache & PHP
+- MariaDB Integration
+- Application Load Balancer
+
+---
