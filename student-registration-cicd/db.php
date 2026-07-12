@@ -1,9 +1,9 @@
 <?php
 
-$host = getenv('DB_HOST') ?: '172.31.29.160';
+$host = getenv('DB_HOST') ?: '172.31.26.163';
 $database = getenv('DB_NAME') ?: 'student_portal';
 $username = getenv('DB_USER') ?: 'student_app';
-$password = getenv('DB_PASSWORD') ?: 'REPLACE_WITH_YOUR_DATABASE_PASSWORD';
+$password = getenv('DB_PASSWORD') ?: 'student1234';
 
 try {
     $pdo = new PDO(
