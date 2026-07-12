@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav">
+        <a class="brand" href="index.html">Student Portal</a>
+        <nav>
+            <button id="logoutButton" class="btn small button-reset">Logout</button>
+        </nav>
+    </div>
+</header>
+
+<main class="dashboard container">
+    <section class="welcome-card">
+        <span class="badge">Logged In</span>
+        <h1 id="welcomeName">Welcome, Student</h1>
+        <p>This is a frontend dashboard preview.</p>
+    </section>
+
+    <section class="details-card">
+        <h2>Student Details</h2>
+
+        <div class="details-grid">
+            <div>
+                <span>Full Name</span>
+                <strong id="studentName">—</strong>
+            </div>
+
+            <div>
+                <span>Email</span>
+                <strong id="studentEmail">—</strong>
+            </div>
+
+            <div>
+                <span>USN</span>
+                <strong id="studentUsn">—</strong>
+            </div>
+
+            <div>
+                <span>Department</span>
+                <strong id="studentDepartment">—</strong>
+            </div>
+        </div>
+
+        <div class="notice">
+            Demo data is stored only in your browser. It will later be replaced by PHP and MySQL on AWS.
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
