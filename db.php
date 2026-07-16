@@ -1,14 +1,14 @@
 <?php
 
-$host = getenv('DB_HOST') ?: '172.31.29.160';
-$database = getenv('DB_NAME') ?: 'student_portal';
-$username = getenv('DB_USER') ?: 'student_app';
-$password = getenv('DB_PASSWORD') ?: 'REPLACE_WITH_YOUR_DATABASE_PASSWORD';
+$host = getenv('DB_HOST') ?: 'mariadb-service';
+$user = getenv('DB_USER') ?: 'studentuser';
+$password = getenv('DB_PASSWORD') ?: 'studentpass';
+$dbname = getenv('DB_NAME') ?: 'studentdb';
 
 try {
     $pdo = new PDO(
-        "mysql:host={$host};dbname={$database};charset=utf8mb4",
-        $username,
+        "mysql:host={$host};dbname={$dbname};charset=utf8mb4",
+        $user,
         $password,
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -17,7 +17,6 @@ try {
         ]
     );
 } catch (PDOException $exception) {
-    error_log('Database connection failed: ' . $exception->getMessage());
-    http_response_code(500);
-    exit('Database connection failed.');
+    error_log($exception->getMessage());
+    die("Database connection failed.");
 }

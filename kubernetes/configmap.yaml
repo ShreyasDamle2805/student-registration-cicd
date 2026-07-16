@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: student-config
+  namespace: student-registration
+data:
+  DB_HOST: mariadb-service
+  DB_NAME: studentdb
+  DB_USER: studentuser

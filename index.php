@@ -8,14 +8,14 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal</title>
+    <title>Simple Student Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
     <div class="container nav">
-        <a class="brand" href="index.php">Student Portal</a>
+        <a class="brand" href="index.php">Simple Student Portal</a>
 
         <nav>
             <?php if (isset($_SESSION['student_id'])): ?>

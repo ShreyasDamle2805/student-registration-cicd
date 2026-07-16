@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-registration-service
+  namespace: student-registration
+spec:
+  selector:
+    app: student-registration
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
